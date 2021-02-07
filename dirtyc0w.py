@@ -29,7 +29,7 @@ $ python3 -i kernel.pyc
 
 
 ORIGINAL: HAHA ONLY ROOT CAN WRITE TO THIS!
-    GOAL: HAHA I CAN WRITE TO THIS!
+    GOAL: HAHA USERS CAN WRITE TO THIS TOO!
 
 Step 2: Modify the _copy_on_write method in KernelPatched to patch the dirty
 cow exploit. Remember to uncomment # k = KernelPatched() in the main block below
@@ -70,7 +70,7 @@ def thread_function2(kernel):
     # TODO: STEP 1
     # VXNlIHdyaXRlIGhlcmUgdG8gY2F1c2UgYSBjb3B5IG9uIHdyaXRlIChDT1cp
     pass
-
+    
 class KernelPatched(Kernel):
     def _copy_on_write(self, addr, buffer):
         # TODO: Modify this function to patch dirtyc0w
