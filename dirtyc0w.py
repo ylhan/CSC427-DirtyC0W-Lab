@@ -64,12 +64,10 @@ from kernel import Kernel
 def thread_function1(kernel):
     # TODO: STEP 1
     # VXNlIGRvbnRuZWVkIGhlcmUuIFRoaXMgbWV0aG9kIHdpbGwgY2F1c2UgYSBnaXZlbiByYW5nZSBvZiBtZW1vcnkgdG8gYmUgd3JpdHRlbiBiYWNrIHRvIGRpc2su
-    pass
 
 def thread_function2(kernel):
     # TODO: STEP 1
     # VXNlIHdyaXRlIGhlcmUgdG8gY2F1c2UgYSBjb3B5IG9uIHdyaXRlIChDT1cp
-    pass
     
 class KernelPatched(Kernel):
     def _copy_on_write(self, addr, buffer):
