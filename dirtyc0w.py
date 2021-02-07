@@ -6,6 +6,9 @@ Welcome to the Dirty Cow lab!
 NOTE: There are hints spread out through the file (base64 encoded). You can 
 decode these strings if you need a hint.
 
+NOTE: To complete this lab you ONLY need the methods provided in the Kernel
+below. Do not access/use attributes or methods with an _ or obfuscated names.
+
 HINT: aHR0cHM6Ly9naXRodWIuY29tL2RpcnR5Y293L2RpcnR5Y293LmdpdGh1Yi5pby9ibG9iL21hc3Rlci9kaXJ0eWMwdy5j
 
 Step 1: Fill in the two thread_function's using the methods provided by the
