@@ -11,7 +11,7 @@ HINT: aHR0cHM6Ly9naXRodWIuY29tL2RpcnR5Y293L2RpcnR5Y293LmdpdGh1Yi5pby9ibG9iL21hc3
 Step 1: Fill in the two thread_function's using the methods provided by the
 Kernel so that rootfile.txt is modified. 
 
-NOTE: Run `python3 kernel.pyc` and play around with the kernel and it's methods
+NOTE: Run `python3 -i kernel.pyc` and play around with the kernel and it's methods
 to get more familar with them. The docstring and function stubs are provided
 for you below.
 
