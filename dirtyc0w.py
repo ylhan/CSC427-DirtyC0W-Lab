@@ -21,7 +21,9 @@ for you below.
 TRY THIS:
 $ python3 -i kernel.pyc
 >>> k = Kernel()
->>> k.peek()
+>>> k.peek() # try me
+>>> k.write("0x0", "test")
+>>> k.peek() # What happens in memory? What is triggered?
 
 
 ORIGINAL: HAHA ONLY ROOT CAN WRITE TO THIS!
