@@ -33,17 +33,18 @@ after you patch the kernel
 
 You're done! 
 
-========= KERNEL =========
+!!!!!!! NOTE: addresses (addr) are hexstrings e.g. "0x00000008"
 
+========= KERNEL =========
 class Kernel:
     
     def __init__(self, f="rootfile.txt") -> None:
         # Maps the given file (f) into memory
 
-    def write(self, addr: hexstring, buffer: str) -> None:
+    def write(self, addr: String, buffer: str) -> None:
         # Writes the buffer to the address
 
-    def dontneed(self, addr: hexstring, length: int -> None:
+    def dontneed(self, addr: String, length: int -> None:
         # Hints the kernel that memory at address to address + length will not
         # be used. This will result in the kernel writing out the memory to 
         # disk if possible depending on your permissions.
