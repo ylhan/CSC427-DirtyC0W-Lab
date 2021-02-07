@@ -18,6 +18,12 @@ NOTE: Run `python3 -i kernel.pyc` and play around with the kernel and it's metho
 to get more familar with them. The docstring and function stubs are provided
 for you below.
 
+TRY THIS:
+$ python3 -i kernel.pyc
+>>> k = Kernel()
+>>> k.peek()
+
+
 ORIGINAL: HAHA ONLY ROOT CAN WRITE TO THIS!
     GOAL: HAHA I CAN WRITE TO THIS!
 
@@ -34,10 +40,10 @@ class Kernel:
     def __init__(self, f="rootfile.txt") -> None:
         # Maps the given file (f) into memory
 
-    def write(self, addr: int, buffer: str) -> None:
+    def write(self, addr: hexstring, buffer: str) -> None:
         # Writes the buffer to the address
 
-    def dontneed(self, addr, length) -> None:
+    def dontneed(self, addr: hexstring, length: int -> None:
         # Hints the kernel that memory at address to address + length will not
         # be used. This will result in the kernel writing out the memory to 
         # disk if possible depending on your permissions.
