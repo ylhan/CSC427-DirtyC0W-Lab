@@ -89,9 +89,9 @@ if __name__ == "__main__":
 
     # TODO: Uncomment this after patching the Kernel
     k = KernelPatched()
-    # x = threading.Thread(target=thread_function1, args=(k,))
-    # y = threading.Thread(target=thread_function2, args=(k,))
-    # y.start()
-    # x.start()
-    # x.join()
-    # y.join()
+    x = threading.Thread(target=thread_function1, args=(k,))
+    y = threading.Thread(target=thread_function2, args=(k,))
+    y.start()
+    x.start()
+    x.join()
+    y.join()
