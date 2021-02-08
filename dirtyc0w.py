@@ -42,6 +42,9 @@ You're done!
 ========= KERNEL =========
 class Kernel:
     
+    # PUBLIC ATTRIBUTE
+    lock: threading.Lock
+
     def __init__(self, f="rootfile.txt") -> None:
         # Maps the given file (f) into memory
 
@@ -71,22 +74,24 @@ def thread_function2(kernel):
     # VXNlIHdyaXRlIGhlcmUgdG8gY2F1c2UgYSBjb3B5IG9uIHdyaXRlIChDT1cp
     pass 
 class KernelPatched(Kernel):
-    def _copy_on_write(self, addr, buffer):
+    def O00OOOOO00OO00(self, addr, buffer): # copy_on_write
         # TODO: Modify this function to patch dirtyc0w
+        # This method is called by the write method in Kernel.
+        # How was dirty cow patched? Do you need to change the obfuscated code?
         # HINT:  c2VsZi5sb2NrIApodHRwczovL2RvY3MucHl0aG9uLm9yZy8zL2xpYnJhcnkvdGhyZWFkaW5nLmh0bWwjdGhyZWFkaW5nLkxvY2s=
-        self._write_pointer = addr+self._root_mem_bound
-        print("copy_write", self._write_pointer)
-        self._memory[self._root_mem_bound:]= self._memory[:self._root_mem_bound]
-        self._write(buffer)
+        
+        self.O00OOOOO00OO0O = addr+self.O00OOOO000OOOO # lseek to new copy 
+        self.O00OOOOO00OOOO[self.O00OOOO000OOOO:]= self.O00OOOOO00OOOO[:self.O00OOOO000OOOO]
+        self.O00OOOOO00O00O(buffer) # _write to new copy 
 
 if __name__ == "__main__":
     k = Kernel()
 
     # TODO: Uncomment this after patching the Kernel
-    # k = KernelPatched()
-    x = threading.Thread(target=thread_function1, args=(k,))
-    y = threading.Thread(target=thread_function2, args=(k,))
-    y.start()
-    x.start()
-    x.join()
-    y.join()
+    k = KernelPatched()
+    # x = threading.Thread(target=thread_function1, args=(k,))
+    # y = threading.Thread(target=thread_function2, args=(k,))
+    # y.start()
+    # x.start()
+    # x.join()
+    # y.join()
