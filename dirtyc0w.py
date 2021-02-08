@@ -3,7 +3,7 @@
 """
 Welcome to the Dirty Cow lab!
 
-REQUIREMENT: >= python 3.6
+REQUIREMENT: == python 3.6
 
 NOTE: There are hints spread out through the file (base64 encoded). You can 
 decode these strings if you need a hint.
